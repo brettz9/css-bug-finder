@@ -10,3 +10,7 @@ const variables_in_use = [...new Set(__variables_in_use)]
 // COUNTS AMOUNT OF VARIABLES THAT WON'T HAVE A DECLARATION --XXX:
 const nuked_variables = variables_in_use.filter(variable => !code.includes(`--${variable}:`))
 console.log(`${nuked_variables.length} OUT OF ${variables_in_use.length} VARIABLES ARE BROKEN`)
+
+
+fs.writeFileSync("broken.variables.list", nuked_variables.join("\n"))
+console.log('broken variables written to broken.variables.list')
