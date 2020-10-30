@@ -1,4 +1,4 @@
-# CSS BUG FINDERS
+# CSS BUG FINDER
 
 Find bugs in css
 
