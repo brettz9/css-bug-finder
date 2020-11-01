@@ -201,6 +201,14 @@ body.has-navbar-fixed-bottom {
 
 
 
+  --blm-grey-darker-h: 0;
+  --blm-grey-darker-s: 0%;
+  --blm-grey-darker-l: 21%;
+  --blm-grey-darker-a: 1;
+  --blm-blue-h: 217;
+  --blm-blue-s: 71%;
+  --blm-blue-l: 53%;
+  --blm-blue-a: 1;
 
 
 
@@ -241,6 +249,10 @@ body.has-navbar-fixed-bottom {
 
 
 
+  --blm-white-h: 0;
+  --blm-white-s: 0%;
+  --blm-white-l: 100%;
+  --blm-white-a: 1;
 
 
 
@@ -250,37 +262,25 @@ body.has-navbar-fixed-bottom {
 
 
 
+  --blm-grey-dark-s: 0%;
+  --blm-grey-dark-l: 29%;
+  --blm-grey-dark-h: 0;
+  --blm-grey-dark-a: 1;
+  --blm-txt-h: var(--blm-grey-dark-h);
+  --blm-txt-s: var(--blm-grey-dark-s);
+  --blm-txt-l: var(--blm-grey-dark-l);
+  --blm-txt-a: var(--blm-grey-dark-a);
+  --blm-txt: hsla(var(--blm-txt-h), var(--blm-txt-s), var(--blm-txt-l), var(--blm-txt-a));
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  --blm-link-h: var(--blm-blue-h);
+  --blm-link-s: var(--blm-blue-s);
+  --blm-link-l: var(--blm-blue-l);
+  --blm-link-a: var(--blm-blue-a);
+  --blm-link: hsla(var(--blm-link-h), var(--blm-link-s), var(--blm-link-l), var(--blm-link-a));
+  --blm-family-sans-serif: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   --blm-s-7: 0.75rem;
   --blm-s-6: 1rem;
   --blm-s-5: 1.25rem;
@@ -294,13 +294,17 @@ body.has-navbar-fixed-bottom {
 
 
 
-
-
-
-
-
-
+  --blm-sch-main-h: var(--blm-white-h);
+  --blm-sch-main-s: var(--blm-white-s);
+  --blm-sch-main-l: var(--blm-white-l);
+  --blm-sch-main-a: var(--blm-white-a);
+  --blm-sch-main: hsla(var(--blm-sch-main-h), var(--blm-sch-main-s), var(--blm-sch-main-l), var(--blm-sch-main-a));
+  --blm-family-prim: var(--blm-family-sans-serif);
   --blm-weight-normal: 400;
+  --blm-txt-strong-h: var(--blm-grey-darker-h);
+  --blm-txt-strong-s: var(--blm-grey-darker-s);
+  --blm-txt-strong-l: var(--blm-grey-darker-l);
+  --blm-txt-strong-a: var(--blm-grey-darker-a);
 
 
 
@@ -426,6 +430,7 @@ body.has-navbar-fixed-bottom {
 
 
 
+  --blm-weight-semibold: 600;
 
 
 
@@ -462,19 +467,14 @@ body.has-navbar-fixed-bottom {
 
 
 
-
-
-
-
-
-
-
-
-
-
+  --blm-title-clr-h: var(--blm-txt-strong-h);
+  --blm-title-clr-s: var(--blm-txt-strong-s);
+  --blm-title-clr-l: var(--blm-txt-strong-l);
+  --blm-title-clr-a: var(--blm-txt-strong-a);
+  --blm-title-clr: hsla(var(--blm-title-clr-h), var(--blm-title-clr-s), var(--blm-title-clr-l), var(--blm-title-clr-a));
   --blm-title-family: inherit;
   --blm-title-s: var(--blm-s-3);
-
+  --blm-title-weight: var(--blm-weight-semibold);
   --blm-title-line-height: 1.125;
   --blm-title-strong-clr: inherit;
   --blm-title-strong-weight: inherit;
@@ -512,4 +512,4 @@ body.has-navbar-fixed-bottom {
 
 
 
-
+}

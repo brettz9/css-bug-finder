@@ -14,39 +14,35 @@ body {
 This code will get rid of whatever, as it's not used
 */
 
-
 let css = fs.readFileSync("test.css", "utf-8")
 
-/* Takes some giant code and a variable name / css custom property
-    If it finds a var(variable) outside of :root {} scope then the variable matters
-*/
-const is_variable_actually_used = (variable, code) => {
+/** REMOVES HANGING VARIABLES, DECLARED AND NOT USED */
+const remove_unused_variables = code => {
+    console.log("#################################################")
+    let _code = code;
+    const variables = get_declared_variables(_code)
+
+    variables.map(v => {
+        if (!is_variable_used(v, _code)) {
+            console.log(`REMOVING APPEARANCES OF VARIABLE ${v}`)
+            const REG = new RegExp(`.*--${v}:.*`, "g")
+            _code = _code.replace(REG, "")
+        }
+    })
+
+    return _code;
+}
+
+const is_variable_used = (variable, code) => {
     const used_at = code.indexOf(`var(--${variable})`)
-    if(used_at === -1) return false;
-    
-    const before = code.slice(0, used_at)
-    const after = code.slice(used_at+1)
-    const root = /(?=:root)([\s\S]*?)(?=})/g
-
-    // if it was used inside root (we are in root if is not behind or after)
-    const used = before.search(root) !== -1 || after.search(root) !== -1
-
-    return used;
+    return used_at !== -1;
 }
 
 const get_declared_variables = (sourceCode) => {
     return sourceCode.match(/(?<=--)(.*?)(?=:)/g)
 }
 
-const variables = get_declared_variables(css)
+const _ = remove_unused_variables;
 
-variables.map(variable => {
-    if (!is_variable_actually_used(variable, css)) {
-        console.log(`REMOVING APPEARANCES OF VARIABLE ${variable}`)
-
-        const REG = new RegExp(`.*--${variable}.*`, "g")
-        css = css.replace(REG, "")
-    }
-})
-
-fs.writeFileSync("output.css", css)
+// it eventually does nothing, but have to call it many times, junky recursion :p
+fs.writeFileSync("output.css", _(_(_(_(_(_(_(_(_(_(_(_(_(css))))))))))))))
