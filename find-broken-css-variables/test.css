@@ -1,18 +1,15 @@
-
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
-.title:not(:last-child) {
-  margin-bottom: 1.5rem; }
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
-body,
-h1 {
+body {
   margin: 0;
   padding: 0; }
-
-h1 {
-  font-size: 100%;
-  font-weight: normal; }
 
 html {
   box-sizing: border-box; }
@@ -43,99 +40,11 @@ body {
   font-weight: var(--blm-weight-normal);
   line-height: 1.5; }
 
-.container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: auto; }
-
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 960px; }
-  .container.is-fluid {
-    margin-left: 32px;
-    margin-right: 32px;
-    max-width: none; } }
-
-.container.is-fluid {
-  margin-left: 32px;
-  margin-right: 32px;
-  max-width: none;
-  width: auto; }
-
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 960px; } }
-
-@media screen and (max-width: 1215px) {
-  .container.is-widescreen {
-    max-width: 1152px; } }
-
-@media screen and (max-width: 1407px) {
-  .container.is-fullhd {
-    max-width: 1344px; } }
-
-@media screen and (min-width: 1216px) {
-  .container {
-    max-width: 1152px; } }
-
-@media screen and (min-width: 1408px) {
-  .container {
-    max-width: 1344px; } }
-
-.title {
-  word-break: break-word; }
-
-.title em,
-.title span {
-  font-weight: inherit; }
-
-.title sub {
-  font-size: var(--blm-title-sub-s); }
-
-.title sup {
-  font-size: var(--blm-title-sup-s); }
-
-.title .tag {
-  vertical-align: middle; }
-
-.title {
-  color: var(--blm-title-clr);
-  font-family: var(--blm-title-family);
-  font-size: var(--blm-title-s);
-  font-weight: var(--blm-title-weight);
-  line-height: var(--blm-title-line-height); }
-
-.title strong {
-  color: var(--blm-title-strong-clr);
-  font-weight: var(--blm-title-strong-weight); }
-
-.title + .highlight {
-  margin-top: -0.75rem; }
-
-.title:not(.is-spaced) + .subtitle {
-  margin-top: var(--blm-subtitle-negative-m); }
-
-.title.is-1 {
-  font-size: var(--blm-s-1); }
-
-.title.is-2 {
-  font-size: var(--blm-s-2); }
-
-.title.is-3 {
-  font-size: var(--blm-s-3); }
-
-.title.is-4 {
-  font-size: var(--blm-s-4); }
-
-.title.is-5 {
-  font-size: var(--blm-s-5); }
-
-.title.is-6 {
-  font-size: var(--blm-s-6); }
-
-.title.is-7 {
-  font-size: var(--blm-s-7); }
+@keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0; }
+  to {
+    background-position: -200% 0; } }
 
 html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
@@ -154,10 +63,6 @@ body.has-navbar-fixed-bottom {
     padding-bottom: var(--blm-nav-height); } }
 
 @media screen and (min-width: 1024px) {
-  .container > .navbar .navbar-brand {
-    margin-left: -0.75rem; }
-  .container > .navbar .navbar-menu {
-    margin-right: -0.75rem; }
   html.has-navbar-fixed-top-desktop,
   body.has-navbar-fixed-top-desktop {
     padding-top: var(--blm-nav-height); }
@@ -170,12 +75,6 @@ body.has-navbar-fixed-bottom {
   html.has-spaced-navbar-fixed-bottom,
   body.has-spaced-navbar-fixed-bottom {
     padding-bottom: calc(var(--blm-nav-height) + var(--blm-nav-p-vertical)*2); } }
-
-.has-text-link {
-  color: var(--blm-link) !important; }
-
-.mt-6 {
-  margin-top: 3rem !important; }
 
 :root {
   --blm-turquoise-h: 171;
@@ -252,9 +151,6 @@ body.has-navbar-fixed-bottom {
   --blm-s-6: 1rem;
   --blm-s-5: 1.25rem;
   --blm-s-4: 1.5rem;
-  --blm-s-1: 3rem;
-  --blm-s-2: 2.5rem;
-  --blm-s-3: 2rem;
   --blm-radius: 4px;
   --blm-radius-small: 2px;
   --blm-ctrl-bd-width: 1px;
@@ -292,7 +188,6 @@ body.has-navbar-fixed-bottom {
   --blm-s-small: var(--blm-s-7);
   --blm-s-medium: var(--blm-s-5);
   --blm-s-lg: var(--blm-s-4);
-  --blm-weight-semibold: 600;
   --blm-bd-light: hsla(var(--blm-bd-light-h), var(--blm-bd-light-s), var(--blm-bd-light-l), var(--blm-bd-light-a));
   --blm-table-row-hov-bg-clr: hsla(var(--blm-table-row-hov-bg-clr-h), var(--blm-table-row-hov-bg-clr-s), var(--blm-table-row-hov-bg-clr-l), var(--blm-table-row-hov-bg-clr-a));
   --blm-table-striped-row-even-hov-bg-clr: hsla(var(--blm-table-striped-row-even-hov-bg-clr-h), var(--blm-table-striped-row-even-hov-bg-clr-s), var(--blm-table-striped-row-even-hov-bg-clr-l), var(--blm-table-striped-row-even-hov-bg-clr-a));
@@ -305,13 +200,6 @@ body.has-navbar-fixed-bottom {
   --blm-tag-radius: var(--blm-radius);
   --blm-tag-clr: hsla(var(--blm-tag-clr-h), var(--blm-tag-clr-s), var(--blm-tag-clr-l), var(--blm-tag-clr-a));
   --blm-tag-delete-m: 1px;
-  --blm-title-clr: hsla(var(--blm-title-clr-h), var(--blm-title-clr-s), var(--blm-title-clr-l), var(--blm-title-clr-a));
-  --blm-title-family: inherit;
-  --blm-title-s: var(--blm-s-3);
-  --blm-title-weight: var(--blm-weight-semibold);
-  --blm-title-line-height: 1.125;
-  --blm-title-strong-clr: inherit;
-  --blm-title-strong-weight: inherit;
   --blm-subtitle-negative-m: -1.25rem;
   --blm-txtarea-max-height: 40em;
   --blm-txtarea-min-height: 8em;
@@ -333,13 +221,3 @@ body.has-navbar-fixed-bottom {
   --blm-tile-spacing: 0.75rem; }
 
 /*# sourceMappingURL=node_modules/@pathscale/bulma-pull-2981-css-var-only/css/bulma.css.map */
-/* Animations */
-/* Controls */
-/* v-sidebar */
-/* v-tooltip */
-/* v-switch */
-/* v-accordion */
-/* Messages */
-/* Table */
-/* Progress */
-/*# sourceMappingURL=node_modules/@pathscale/bulma-extensions-css-var/css/bulma-extensions-css-var.css.map */
