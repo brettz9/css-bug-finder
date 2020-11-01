@@ -1,0 +1,235 @@
+<script>
+html {
+  background-color: var(--boo-abc-def);
+}
+</script>
+<template>
+html {
+  background-color: var(--boo-abc-def);
+}
+</template>
+<style>
+/*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  background-color: var(--blm-sch-main);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+body {
+  font-family: var(--blm-family-prim); }
+
+body {
+  color: var(--blm-txt);
+  font-size: 1em;
+  font-weight: var(--blm-weight-normal);
+  line-height: 1.5; }
+
+@keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0; }
+  to {
+    background-position: -200% 0; } }
+
+html.has-navbar-fixed-top,
+body.has-navbar-fixed-top {
+  padding-top: var(--blm-nav-height); }
+
+html.has-navbar-fixed-bottom,
+body.has-navbar-fixed-bottom {
+  padding-bottom: var(--blm-nav-height); }
+
+@media screen and (max-width: 1023px) {
+  html.has-navbar-fixed-top-touch,
+  body.has-navbar-fixed-top-touch {
+    padding-top: var(--blm-nav-height); }
+  html.has-navbar-fixed-bottom-touch,
+  body.has-navbar-fixed-bottom-touch {
+    padding-bottom: var(--blm-nav-height); } }
+
+@media screen and (min-width: 1024px) {
+  html.has-navbar-fixed-top-desktop,
+  body.has-navbar-fixed-top-desktop {
+    padding-top: var(--blm-nav-height); }
+  html.has-navbar-fixed-bottom-desktop,
+  body.has-navbar-fixed-bottom-desktop {
+    padding-bottom: var(--blm-nav-height); }
+  html.has-spaced-navbar-fixed-top,
+  body.has-spaced-navbar-fixed-top {
+    padding-top: calc(var(--blm-nav-height) + var(--blm-nav-p-vertical)*2); }
+  html.has-spaced-navbar-fixed-bottom,
+  body.has-spaced-navbar-fixed-bottom {
+    padding-bottom: calc(var(--blm-nav-height) + var(--blm-nav-p-vertical)*2); } }
+
+:root {
+  --blm-turquoise-h: 171;
+  --blm-turquoise-s: 100%;
+  --blm-turquoise-l: 41%;
+  --blm-cyan-h: 204;
+  --blm-cyan-s: 71%;
+  --blm-cyan-l: 53%;
+  --blm-green-h: 141;
+  --blm-green-s: 53%;
+  --blm-green-l: 53%;
+  --blm-yellow-h: 48;
+  --blm-yellow-s: 100%;
+  --blm-yellow-l: 67%;
+  --blm-red-h: 348;
+  --blm-red-s: 86%;
+  --blm-red-l: 61%;
+  --blm-white-ter-h: 0;
+  --blm-white-ter-s: 0%;
+  --blm-white-ter-l: 96%;
+  --blm-white-ter-a: 1;
+  --blm-grey-darker-h: 0;
+  --blm-grey-darker-s: 0%;
+  --blm-grey-darker-l: 21%;
+  --blm-blue-h: 217;
+  --blm-blue-s: 71%;
+  --blm-blue-l: 53%;
+  --blm-prim: hsla(var(--blm-prim-h), var(--blm-prim-s), var(--blm-prim-l), var(--blm-prim-a));
+  --blm-prim-h: var(--blm-turquoise-h);
+  --blm-prim-s: var(--blm-turquoise-s);
+  --blm-prim-l: var(--blm-turquoise-l);
+  --blm-info: hsla(var(--blm-info-h), var(--blm-info-s), var(--blm-info-l), var(--blm-info-a));
+  --blm-info-h: var(--blm-cyan-h);
+  --blm-info-s: var(--blm-cyan-s);
+  --blm-info-l: var(--blm-cyan-l);
+  --blm-sucs: hsla(var(--blm-sucs-h), var(--blm-sucs-s), var(--blm-sucs-l), var(--blm-sucs-a));
+  --blm-sucs-h: var(--blm-green-h);
+  --blm-sucs-s: var(--blm-green-s);
+  --blm-sucs-l: var(--blm-green-l);
+  --blm-warn: hsla(var(--blm-warn-h), var(--blm-warn-s), var(--blm-warn-l), var(--blm-warn-a));
+  --blm-warn-h: var(--blm-yellow-h);
+  --blm-warn-s: var(--blm-yellow-s);
+  --blm-warn-l: var(--blm-yellow-l);
+  --blm-dang: hsla(var(--blm-dang-h), var(--blm-dang-s), var(--blm-dang-l), var(--blm-dang-a));
+  --blm-dang-h: var(--blm-red-h);
+  --blm-dang-s: var(--blm-red-s);
+  --blm-dang-l: var(--blm-red-l);
+  --blm-light: hsla(var(--blm-light-h), var(--blm-light-s), var(--blm-light-l), var(--blm-light-a));
+  --blm-light-h: var(--blm-white-ter-h);
+  --blm-light-s: var(--blm-white-ter-s);
+  --blm-light-l: var(--blm-white-ter-l);
+  --blm-dark: hsla(var(--blm-dark-h), var(--blm-dark-s), var(--blm-dark-l), var(--blm-dark-a));
+  --blm-dark-h: var(--blm-grey-darker-h);
+  --blm-dark-s: var(--blm-grey-darker-s);
+  --blm-dark-l: var(--blm-grey-darker-l);
+  --blm-black: hsla(var(--blm-black-h), var(--blm-black-s), var(--blm-black-l), var(--blm-black-a));
+  --blm-black-h: 0;
+  --blm-black-s: 0%;
+  --blm-black-l: 4%;
+  --blm-white: hsla(var(--blm-white-h), var(--blm-white-s), var(--blm-white-l), var(--blm-white-a));
+  --blm-white-h: 0;
+  --blm-white-s: 0%;
+  --blm-white-l: 100%;
+  --blm-txt: hsla(var(--blm-txt-h), var(--blm-txt-s), var(--blm-txt-l), var(--blm-txt-a));
+  --blm-bg-h: var(--blm-white-ter-h);
+  --blm-bg-s: var(--blm-white-ter-s);
+  --blm-bg-l: var(--blm-white-ter-l);
+  --blm-bg-a: var(--blm-white-ter-a);
+  --blm-link: hsla(var(--blm-link-h), var(--blm-link-s), var(--blm-link-l), var(--blm-link-a));
+  --blm-link-h: var(--blm-blue-h);
+  --blm-link-s: var(--blm-blue-s);
+  --blm-link-l: var(--blm-blue-l);
+  --blm-s-7: 0.75rem;
+  --blm-s-6: 1rem;
+  --blm-s-5: 1.25rem;
+  --blm-s-4: 1.5rem;
+  --blm-radius: 4px;
+  --blm-radius-small: 2px;
+  --blm-ctrl-bd-width: 1px;
+  --blm-s-normal: var(--blm-s-6);
+  --blm-ctrl-height: 2.5em;
+  --blm-radius-rounded: 290486px;
+  --blm-sch-main: hsla(var(--blm-sch-main-h), var(--blm-sch-main-s), var(--blm-sch-main-l), var(--blm-sch-main-a));
+  --blm-weight-normal: 400;
+  --blm-bt-bd-width: var(--blm-ctrl-bd-width);
+  --blm-bt-p-horizontal: 1em;
+  --blm-bt-foc-box-shadow-s: 0 0 0 0.125em;
+  --blm-bt-foc-box-shadow-clr: hsla(var(--blm-bt-foc-box-shadow-clr-h), var(--blm-bt-foc-box-shadow-clr-s), var(--blm-bt-foc-box-shadow-clr-l), var(--blm-bt-foc-box-shadow-clr-a));
+  --blm-white-inv: hsla(var(--blm-white-inv-h), var(--blm-white-inv-s), var(--blm-white-inv-l), var(--blm-white-inv-a));
+  --blm-black-inv: hsla(var(--blm-black-inv-h), var(--blm-black-inv-s), var(--blm-black-inv-l), var(--blm-black-inv-a));
+  --blm-light-inv: hsla(var(--blm-light-inv-h), var(--blm-light-inv-s), var(--blm-light-inv-l), var(--blm-light-inv-a));
+  --blm-dark-inv: hsla(var(--blm-dark-inv-h), var(--blm-dark-inv-s), var(--blm-dark-inv-l), var(--blm-dark-inv-a));
+  --blm-prim-inv: hsla(var(--blm-prim-inv-h), var(--blm-prim-inv-s), var(--blm-prim-inv-l), var(--blm-prim-inv-a));
+  --blm-prim-light: hsla(var(--blm-prim-light-h), var(--blm-prim-light-s), var(--blm-prim-light-l), var(--blm-prim-light-a));
+  --blm-prim-dark: hsla(var(--blm-prim-dark-h), var(--blm-prim-dark-s), var(--blm-prim-dark-l), var(--blm-prim-dark-a));
+  --blm-link-inv: hsla(var(--blm-link-inv-h), var(--blm-link-inv-s), var(--blm-link-inv-l), var(--blm-link-inv-a));
+  --blm-link-light: hsla(var(--blm-link-light-h), var(--blm-link-light-s), var(--blm-link-light-l), var(--blm-link-light-a));
+  --blm-link-dark: hsla(var(--blm-link-dark-h), var(--blm-link-dark-s), var(--blm-link-dark-l), var(--blm-link-dark-a));
+  --blm-info-inv: hsla(var(--blm-info-inv-h), var(--blm-info-inv-s), var(--blm-info-inv-l), var(--blm-info-inv-a));
+  --blm-info-light: hsla(var(--blm-info-light-h), var(--blm-info-light-s), var(--blm-info-light-l), var(--blm-info-light-a));
+  --blm-info-dark: hsla(var(--blm-info-dark-h), var(--blm-info-dark-s), var(--blm-info-dark-l), var(--blm-info-dark-a));
+  --blm-sucs-inv: hsla(var(--blm-sucs-inv-h), var(--blm-sucs-inv-s), var(--blm-sucs-inv-l), var(--blm-sucs-inv-a));
+  --blm-sucs-light: hsla(var(--blm-sucs-light-h), var(--blm-sucs-light-s), var(--blm-sucs-light-l), var(--blm-sucs-light-a));
+  --blm-sucs-dark: hsla(var(--blm-sucs-dark-h), var(--blm-sucs-dark-s), var(--blm-sucs-dark-l), var(--blm-sucs-dark-a));
+  --blm-warn-inv: hsla(var(--blm-warn-inv-h), var(--blm-warn-inv-s), var(--blm-warn-inv-l), var(--blm-warn-inv-a));
+  --blm-warn-light: hsla(var(--blm-warn-light-h), var(--blm-warn-light-s), var(--blm-warn-light-l), var(--blm-warn-light-a));
+  --blm-warn-dark: hsla(var(--blm-warn-dark-h), var(--blm-warn-dark-s), var(--blm-warn-dark-l), var(--blm-warn-dark-a));
+  --blm-dang-inv: hsla(var(--blm-dang-inv-h), var(--blm-dang-inv-s), var(--blm-dang-inv-l), var(--blm-dang-inv-a));
+  --blm-dang-light: hsla(var(--blm-dang-light-h), var(--blm-dang-light-s), var(--blm-dang-light-l), var(--blm-dang-light-a));
+  --blm-dang-dark: hsla(var(--blm-dang-dark-h), var(--blm-dang-dark-s), var(--blm-dang-dark-l), var(--blm-dang-dark-a));
+  --blm-s-small: var(--blm-s-7);
+  --blm-s-medium: var(--blm-s-5);
+  --blm-s-lg: var(--blm-s-4);
+  --blm-bd-light: hsla(var(--blm-bd-light-h), var(--blm-bd-light-s), var(--blm-bd-light-l), var(--blm-bd-light-a));
+  --blm-table-row-hov-bg-clr: hsla(var(--blm-table-row-hov-bg-clr-h), var(--blm-table-row-hov-bg-clr-s), var(--blm-table-row-hov-bg-clr-l), var(--blm-table-row-hov-bg-clr-a));
+  --blm-table-striped-row-even-hov-bg-clr: hsla(var(--blm-table-striped-row-even-hov-bg-clr-h), var(--blm-table-striped-row-even-hov-bg-clr-s), var(--blm-table-striped-row-even-hov-bg-clr-l), var(--blm-table-striped-row-even-hov-bg-clr-a));
+  --blm-table-striped-row-even-bg-clr: hsla(var(--blm-table-striped-row-even-bg-clr-h), var(--blm-table-striped-row-even-bg-clr-s), var(--blm-table-striped-row-even-bg-clr-l), var(--blm-table-striped-row-even-bg-clr-a));
+  --blm-tag-bg-clr: hsla(var(--blm-tag-bg-clr-h), var(--blm-tag-bg-clr-s), var(--blm-tag-bg-clr-l), var(--blm-tag-bg-clr-a));
+  --blm-tag-bg-clr-h: var(--blm-bg-h);
+  --blm-tag-bg-clr-s: var(--blm-bg-s);
+  --blm-tag-bg-clr-l: var(--blm-bg-l);
+  --blm-tag-bg-clr-a: var(--blm-bg-a);
+  --blm-tag-radius: var(--blm-radius);
+  --blm-tag-clr: hsla(var(--blm-tag-clr-h), var(--blm-tag-clr-s), var(--blm-tag-clr-l), var(--blm-tag-clr-a));
+  --blm-tag-delete-m: 1px;
+  --blm-subtitle-negative-m: -1.25rem;
+  --blm-txtarea-max-height: 40em;
+  --blm-txtarea-min-height: 8em;
+  --blm-input-hov-clr: hsla(var(--blm-input-hov-clr-h), var(--blm-input-hov-clr-s), var(--blm-input-hov-clr-l), var(--blm-input-hov-clr-a));
+  --blm-input-height: var(--blm-ctrl-height);
+  --blm-input-arrow: hsla(var(--blm-input-arrow-h), var(--blm-input-arrow-s), var(--blm-input-arrow-l), var(--blm-input-arrow-a));
+  --blm-block-spacing: 1.5rem;
+  --blm-card-ft-bd-top: 1px solid var(--blm-bd-light);
+  --blm-card-media-m: var(--blm-block-spacing);
+  --blm-level-itm-spacing: calc(var(--blm-block-spacing)/2);
+  --blm-menu-label-spacing: 1em;
+  --blm-nav-height: 3.25rem;
+  --blm-nav-drp-arrow: hsla(var(--blm-nav-drp-arrow-h), var(--blm-nav-drp-arrow-s), var(--blm-nav-drp-arrow-l), var(--blm-nav-drp-arrow-a));
+  --blm-nav-p-vertical: 1rem;
+  --blm-nav-itm-act-bg-clr: hsla(var(--blm-nav-itm-act-bg-clr-h), var(--blm-nav-itm-act-bg-clr-s), var(--blm-nav-itm-act-bg-clr-l), var(--blm-nav-itm-act-bg-clr-a));
+  --blm-pnl-m: var(--blm-block-spacing);
+  --blm-pnl-itm-bd: 1px solid var(--blm-bd-light);
+  --blm-column-gap: 0.75rem;
+  --blm-tile-spacing: 0.75rem; }
+
+/*# sourceMappingURL=node_modules/@pathscale/bulma-pull-2981-css-var-only/css/bulma.css.map */
+</style>
